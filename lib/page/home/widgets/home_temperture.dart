@@ -20,7 +20,7 @@ class HomeTemperture extends StatelessWidget {
           ),
         ),
         const Text(
-          '0',
+          'o',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
         )
       ],
