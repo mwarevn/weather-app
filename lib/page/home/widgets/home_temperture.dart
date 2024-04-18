@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
 class HomeTemperture extends StatelessWidget {
-  const HomeTemperture({super.key});
+  final num temp;
+  const HomeTemperture({super.key, required this.temp});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    int t = temp.round();
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "45",
-          style: TextStyle(
+          "$t",
+          style: const TextStyle(
             fontSize: 100,
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
         ),
-        Text(
+        const Text(
           '0',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
         )

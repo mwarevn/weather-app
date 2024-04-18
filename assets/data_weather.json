@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 106.7547,
+        "lat": 10.1394
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 302.19,
+        "feels_like": 303.38,
+        "temp_min": 302.19,
+        "temp_max": 302.19,
+        "preesure": 1016,
+        "humidity": 54
+    },
+    "visibility": 1000000,
+    "wind": {
+        "speed":1.54,
+        "deg": 0
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 17342342342,
+    "sys": {
+        "type": 1,
+        "id": 9314,
+        "country": "VN",
+        "sunrise": 17342342342,
+        "sunset": 17342342342
+    },
+    "timezone": 25200,
+    "id": 17342342342,
+    "name": "Ha Noi City",
+    "cod": 30000
+}

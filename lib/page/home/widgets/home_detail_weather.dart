@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/models/weather_model.dart';
 
 class HomeDetailWeather extends StatelessWidget {
-  const HomeDetailWeather({super.key});
+  final Main detail;
+  final Wind wind;
+  const HomeDetailWeather({super.key, required this.detail, required this.wind});
 
   @override
   Widget build(BuildContext context) {
@@ -11,18 +14,18 @@ class HomeDetailWeather extends StatelessWidget {
         Column(
           children: [
             Image.asset('assets/icons/ph_wind.png'),
-            const Text(
-              "5km/h",
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            Text(
+              "${wind.speed}km/h",
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             )
           ],
         ),
         Column(
           children: [
             Image.asset('assets/icons/humidity.png'),
-            const Text(
-              "30%",
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            Text(
+              "${detail.humidity.round()}%",
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             )
           ],
         ),

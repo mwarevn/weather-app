@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HomeWeatherIcon extends StatelessWidget {
-  const HomeWeatherIcon({super.key});
+  final String icon;
+  const HomeWeatherIcon({super.key, required this.icon});
+
+  String iconFormat(input) {
+    String result = input.replaceAll(' ', '').toLowerCase();
+    return result;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +16,7 @@ class HomeWeatherIcon extends StatelessWidget {
     return SizedBox(
       width: size.width / 1.8,
       child: Image.asset(
-        "assets/icons/lightdrizzle-1.png",
+        "assets/icons/${iconFormat(icon)}.png",
         fit: BoxFit.cover,
       ),
     );
